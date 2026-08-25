@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Survey Confirmation</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; color: #000; }
+        h1 { color: #008000; font-size: 22px; margin-bottom: 15px; }
+        .intro { font-size: 14px; margin-bottom: 20px; }
+        .info-table { border-collapse: collapse; margin-bottom: 20px; }
+        .info-table td { padding: 4px 10px 4px 0; font-size: 14px; }
+        .info-table td.label { font-weight: bold; width: 140px; }
+        .note { font-size: 13px; margin-bottom: 15px; max-width: 600px; line-height: 1.4; }
+        .btn-return { padding: 3px 10px; font-size: 13px; background-color: #f0f0f0; border: 1px solid #767676; border-radius: 2px; cursor: pointer; }
+        .btn-return:hover { background-color: #e5e5e5; }
+    </style>
+</head>
+<body>
+
+    <h1>Thanks for filling out our survey!</h1>
+    <p class="intro">Here is the information you provided:</p>
+
+    <table class="info-table">
+        <tr><td class="label">First Name:</td><td id="resFirstName"></td></tr>
+        <tr><td class="label">Last Name:</td><td id="resLastName"></td></tr>
+        <tr><td class="label">Email:</td><td id="resEmail"></td></tr>
+        <tr><td class="label">Date of Birth:</td><td id="resDob"></td></tr>
+        <tr><td class="label">Heard from:</td><td id="resSource"></td></tr>
+        <tr><td class="label">Announcements:</td><td id="resAnnounce"></td></tr>
+        <tr><td class="label">Email Updates:</td><td id="resEmailUpdates"></td></tr>
+        <tr><td class="label">Contact by:</td><td id="resContact"></td></tr>
+    </table>
+
+    <p class="note">
+        To enter another survey, click on the Back button in your browser or the Return button shown below.
+    </p>
+
+    <button class="btn-return" onclick="window.location.href='index.html'">Return</button>
+
+    <script>
+        // Lấy dữ liệu đã lưu từ localStorage và hiển thị
+        const data = JSON.parse(localStorage.getItem('surveyData'));
+
+        if (data) {
+            document.getElementById('resFirstName').textContent = data.firstName;
+            document.getElementById('resLastName').textContent = data.lastName;
+            document.getElementById('resEmail').textContent = data.email;
+            document.getElementById('resDob').textContent = data.dob;
+            document.getElementById('resSource').textContent = data.source;
+            document.getElementById('resAnnounce').textContent = data.announcements;
+            document.getElementById('resEmailUpdates').textContent = data.emailAnnouncements;
+            document.getElementById('resContact').textContent = data.contactMethod;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,137 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  padding: 10px 20px;
+  background-color: #ffffff;
+  color: #333333;
+}
+
+/* Logo CSS */
+.logo-container {
+  margin-bottom: 15px;
+}
+
+.logo-box {
+  width: 80px;
+  height: 80px;
+  background-color: #d11124;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.logo-m {
+  font-size: 32px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.logo-text {
+  font-size: 11px;
+  letter-spacing: 0.5px;
+  margin-top: 2px;
+}
+
+/* Layout Form */
+.container {
+  max-width: 800px;
+}
+
+h1 {
+  color: #008080;
+  font-size: 22px;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+.intro-text {
+  font-size: 13px;
+  margin-bottom: 15px;
+}
+
+h2 {
+  color: #008080;
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 12px;
+  font-weight: bold;
+  line-height: 1.3;
+}
+
+/* Inputs */
+.form-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.form-group label {
+  width: 100px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+  width: 170px;
+  padding: 2px 4px;
+  border: 1px solid #767676;
+  border-radius: 2px;
+  font-size: 13px;
+}
+
+/* Radio & Checkbox Groups */
+.radio-group,
+.checkbox-group {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.radio-group label,
+.checkbox-group label {
+  margin-right: 12px;
+  cursor: pointer;
+}
+
+.radio-group input,
+.checkbox-group input {
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
+/* Dropdown Select */
+.select-group {
+  font-size: 13px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.select-group label {
+  margin-right: 4px;
+}
+
+.select-group select {
+  font-size: 13px;
+  padding: 1px;
+}
+
+/* Submit Button */
+.button-group button {
+  padding: 2px 8px;
+  font-size: 13px;
+  background-color: #f0f0f0;
+  border: 1px solid #767676;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.button-group button:hover {
+  background-color: #e5e5e5;
+}
